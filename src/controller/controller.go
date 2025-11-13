@@ -18,3 +18,10 @@ func Home(w http.ResponseWriter, r *http.Request) {
 	}
 	renderPage(w, "index.html", data)
 }
+
+func Quiz(w http.ResponseWriter, r *http.Request) {
+	data := map[string]any{
+		"Message": "Controller Quiz !",
+	}
+	renderPage(w, "quiz.html", data)
+}
