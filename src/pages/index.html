@@ -1,13 +1,32 @@
 {{define "index.html"}}
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuizGo</title>
+    <title>GoQuiz</title>
 </head>
+
 <body>
-    <h1>Hello from {{ .Message }}</h1>
+    <header>
+        <a href="/">GOQUIZ</a>
+        <nav>
+            <ul>
+                <li>Choisez le quiz: </li>
+                <li><button>Informatique</button></li>
+                <li><button>Cybersécurité</button></li>
+                <li><button>Data / IA</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Hello from {{ .Message }}</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure repellendus earum aliquam necessitatibus minus,
+            animi debitis optio velit illo, amet tempora, voluptate quo quas aut ea quae. Fuga, ducimus ullam.</p>
+        <button>Quiz au hasard</button>
+    </main>
 </body>
+
 </html>
 {{end}}
