@@ -130,3 +130,20 @@ header .container nav ul {
 .question__container h4 {
     color: var(--sec-color);
 }
+
+.ScorePage {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ScorePage h3 {
+    font-size: 2rem;
+}
+
+.ScorePage h4 {
+    font-size: 1.4rem;
+}
