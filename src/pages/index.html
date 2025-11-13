@@ -6,21 +6,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GoQuiz</title>
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 
 <body>
     <header>
-        <a href="/">GOQUIZ</a>
-        <nav>
-            <ul>
-                <li>Choisez le quiz: </li>
-                <li><button>Informatique</button></li>
-                <li><button>Cybersécurité</button></li>
-                <li><button>Data / IA</button></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <a href="/">GOQUIZ</a>
+            <nav>
+                <ul>
+                    <li>Choisissez le quiz: </li>
+                    <li><button>Informatique</button></li>
+                    <li><button>Cybersécurité</button></li>
+                    <li><button>Data / IA</button></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
+    <main class="container">
         <h1>Hello from {{ .Message }}</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure repellendus earum aliquam necessitatibus minus,
             animi debitis optio velit illo, amet tempora, voluptate quo quas aut ea quae. Fuga, ducimus ullam.</p>
