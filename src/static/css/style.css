@@ -3,7 +3,7 @@
 :root {
     --bg-color: #ffffff;
     --text-color: #111111;
-    
+    --main-color: #5266c2;
 }
 
 * {
@@ -23,9 +23,15 @@ body {
     margin: auto;
 }
 
-ul, li {
+ul,
+li {
     text-decoration: none;
     list-style: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
 }
 
 header .container {
@@ -39,4 +45,47 @@ header .container nav ul {
     display: flex;
     align-items: center;
     gap: 1rem;
+}
+
+.logo {
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.submit__btn {
+    background: var(--main-color);
+    color: var(--bg-color);
+    padding: 1rem 2rem;
+    border-radius: 32px;
+    transition: .3s;
+    font-size: 1.5rem;
+
+}
+
+.submit__btn:hover {
+    opacity: .9;
+    transform: translateY(-3px);
+}
+
+.choise__btn {
+    border: 1px solid var(--main-color);
+    background: var(--bg-color);
+    padding: .5rem 1rem;
+    border-radius: 16px;
+    transition: .3s;
+}
+
+.choise__btn:hover {
+    opacity: .9;
+    transform: translateY(-3px);
+}
+
+.info__container {
+    margin-top: 15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
 }
