@@ -10,5 +10,6 @@ func New() *http.ServeMux {
 
 	mux.HandleFunc("/", controller.Home)
 	mux.HandleFunc("/quiz", controller.Quiz)
+	mux.HandleFunc("/score", controller.Score)
 	return mux
 }

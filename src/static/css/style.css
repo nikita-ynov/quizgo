@@ -4,6 +4,7 @@
     --bg-color: #ffffff;
     --text-color: #111111;
     --main-color: #5266c2;
+    --sec-color: #52c281;
 }
 
 * {
@@ -19,14 +20,17 @@ body {
 }
 
 .container {
+    position: relative;
     max-width: 1200px;
     margin: auto;
 }
 
 ul,
-li {
+li,
+a {
     text-decoration: none;
     list-style: none;
+    color: var(--text-color);
 }
 
 button {
@@ -88,4 +92,41 @@ header .container nav ul {
     flex-direction: column;
     gap: 2rem;
     align-items: flex-start;
+}
+
+.close__button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.QuizPage {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz__container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+
+}
+
+.res__container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    width: 30rem;
+}
+
+.question__container h4 {
+    color: var(--sec-color);
 }

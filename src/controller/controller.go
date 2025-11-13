@@ -25,3 +25,10 @@ func Quiz(w http.ResponseWriter, r *http.Request) {
 	}
 	renderPage(w, "quiz.html", data)
 }
+
+func Score(w http.ResponseWriter, r *http.Request) {
+	data := map[string]any{
+		"Message": "Controller Score !",
+	}
+	renderPage(w, "score.html", data)
+}
