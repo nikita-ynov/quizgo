@@ -15,13 +15,6 @@ func renderPage(w http.ResponseWriter, filename string, data any) {
 	}
 }
 
-func Home(w http.ResponseWriter, r *http.Request) {
-	data := map[string]any{
-		"Message": "Controller Home !",
-	}
-	renderPage(w, "index.html", data)
-}
-
 func Quiz(w http.ResponseWriter, r *http.Request) {
 	quizType := r.URL.Query().Get("type")
 	stepStr := r.URL.Query().Get("step")
