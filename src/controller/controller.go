@@ -73,8 +73,28 @@ func Quiz(w http.ResponseWriter, r *http.Request) {
 }
 
 func Score(w http.ResponseWriter, r *http.Request) {
-	data := map[string]any{
-		"Message": "Controller Score !",
+
+	scoreStr := r.URL.Query().Get("score")
+	totalStr := r.URL.Query().Get("total")
+
+	score, _ := strconv.Atoi(scoreStr)
+	total, _ := strconv.Atoi(totalStr)
+
+	message := "Bien joué !"
+
+	if score == total {
+		message = "🔥 Score parfait ! Tu es un(e) crack !"
+	} else if score >= total/2 {
+		message = "😎 Pas mal du tout, continue comme ça !"
+	} else {
+		message = "😂 Aïe... On va dire que c'était l'échauffement !"
 	}
+
+	data := map[string]any{
+		"Score":   score,
+		"Total":   total,
+		"Message": message,
+	}
+
 	renderPage(w, "score.html", data)
 }
