@@ -2,7 +2,7 @@ package quizzes
 
 func QuizInfo() Quiz {
 	return Quiz{
-		Title: "Quiz Développement",
+		Title: "Quiz Informatique",
 		Questions: []Question{
 			{"Que signifie HTML ?", []string{"Langage de balisage pour les pages web", "Langage de programmation serveur", "Base de données"}, 0},
 			{"Que signifie CSS ?", []string{"Feuilles de style pour les pages web", "Langage de programmation", "Serveur web"}, 0},

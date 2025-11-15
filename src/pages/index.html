@@ -12,11 +12,10 @@
 <body>
     <header>
         <div class="container">
-            <a href="/" class="logo">GOQUIZ</a>
+            <a href="/" class="logo">GO<span class="green">QUIZ</span></a>
             <nav>
                 <ul>
-                    <!-- Doit envoyer sur la page quiz.html -->
-                    <li class="text">Choisissez le quiz: </li>
+                    <li class="text">Choisissez le quiz :</li>
                     <li><a href="/quiz?type=info" class="choise__btn">Informatique</a></li>
                     <li><a href="/quiz?type=cyber" class="choise__btn">Cybersécurité</a></li>
                     <li><a href="/quiz?type=ia" class="choise__btn">Data / IA</a></li>
@@ -26,11 +25,10 @@
     </header>
     <main class="container">
         <div class="info__container">
-            <h1>Hello from {{ .Message }}</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure repellendus earum aliquam necessitatibus
-                minus,
-                animi debitis optio velit illo, amet tempora, voluptate quo quas aut ea quae. Fuga, ducimus ullam.</p>
-            <button class="submit__btn">Quiz au hasard</button>
+            <h1>Bienvenue sur Go<span class="green">Quiz</span> !</h1>
+            <p>Testez vos connaissances avec nos quiz interactifs ! Que vous soyez passionné d’informatique, de cybersécurité ou de data science, nous avons des quiz adaptés à tous les niveaux.</p>
+            <p>Choisissez un quiz dans le menu ci-dessus ou cliquez sur le bouton ci-dessous pour tenter un quiz aléatoire.</p>
+            <a href="/quiz?type=random" class="submit__btn">Quiz au hasard</a>
         </div>
     </main>
 </body>

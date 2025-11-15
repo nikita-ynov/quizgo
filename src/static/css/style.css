@@ -51,6 +51,10 @@ header .container nav ul {
     gap: 1rem;
 }
 
+.green {
+    color: var(--sec-color);
+}
+
 .logo {
     font-weight: 700;
     color: var(--text-color);

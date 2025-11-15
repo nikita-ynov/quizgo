@@ -3,6 +3,7 @@ package controller
 import (
 	"goquiz/pages"
 	"goquiz/quizzes"
+	"math/rand"
 	"net/http"
 	"strconv"
 )
@@ -29,6 +30,11 @@ func Quiz(w http.ResponseWriter, r *http.Request) {
 
 	step, _ := strconv.Atoi(stepStr)
 	score, _ := strconv.Atoi(scoreStr)
+
+	if quizType == "random" {
+		types := []string{"info", "cyber", "ia"}
+		quizType = types[rand.Intn(len(types))]
+	}
 
 	var q quizzes.Quiz
 
