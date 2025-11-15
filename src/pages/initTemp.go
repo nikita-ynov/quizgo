@@ -2,20 +2,33 @@ package pages
 
 import (
 	"html/template"
+	"os"
+	"path/filepath"
 )
 
 var Temp *template.Template
 
+func add1(x int) int {
+	return x + 1
+}
+
 func Init() {
-	funcMap := template.FuncMap{
-		"seq": func(start, end int) []int {
-			s := make([]int, end-start+1)
-			for i := range s {
-				s[i] = start + i
-			}
-			return s
-		},
+	Temp = template.New("").Funcs(template.FuncMap{
+		"add1": add1,
+	})
+
+	err := filepath.Walk("pages", func(path string, info os.FileInfo, err error) error {
+		if err != nil {
+			return err
+		}
+		if !info.IsDir() && filepath.Ext(path) == ".html" {
+			_, e := Temp.ParseFiles(path)
+			return e
+		}
+		return nil
+	})
+
+	if err != nil {
+		panic(err)
 	}
-	Temp = template.Must(template.New("").Funcs(funcMap).ParseGlob("templates/*.html"))
-	template.Must(Temp.ParseGlob("pages/*.html"))
 }

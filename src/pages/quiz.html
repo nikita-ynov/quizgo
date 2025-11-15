@@ -5,25 +5,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
+    <title>{{ .Quiz.Title }}</title>
     <link rel="stylesheet" href="/static/css/style.css">
-
 </head>
 
 <body>
     <main class="container QuizPage">
-        <!-- A la fin de quiz envoie sur la page du score (score.html) -->
         <a class="close__button" href="/">X</a>
+
         <div class="quiz__container">
+
             <div class="question__container">
-                <h4>Question</h4>
-                <h3>Example de question ?</h3>
+                <h4>Question {{ .Step | add1 }}</h4>
+                <h3>{{ .Question.Text }}</h3>
             </div>
-            <div class="res__container">
-                <button class="choise__btn">Reponse 1</button>
-                <button class="choise__btn">Reponse 2</button>
-                <button class="choise__btn">Reponse 3</button>
-            </div>
+
+            <form method="GET" action="/quiz" class="res__container">
+
+                <input type="hidden" name="type" value="{{ .QuizType }}">
+
+                <input type="hidden" name="step" value="{{ .NextStep }}">
+
+                <input type="hidden" name="score" value="{{ .Score }}">
+
+                {{range $i, $c := .Question.Choices}}
+                <button type="submit" name="answer" value="{{$i}}" class="choise__btn">
+                    {{$c}}
+                </button>
+                {{end}}
+
+            </form>
         </div>
     </main>
 </body>
