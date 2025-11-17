@@ -15,8 +15,7 @@ func renderPage(w http.ResponseWriter, filename string, data any) {
 	}
 }
 func Home(w http.ResponseWriter, r *http.Request) {
-	data := map[string]any{}
-	renderPage(w, "index.html", data)
+	renderPage(w, "index.html", nil)
 }
 
 func Quiz(w http.ResponseWriter, r *http.Request) {
