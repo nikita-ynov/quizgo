@@ -18,6 +18,10 @@ body {
     font-family: "Montserrat", sans-serif;
     color: var(--text-color);
     background-image: linear-gradient(rgba(0, 174, 255, 0.1), rgba(13, 0, 255, 0.1));
+
+    /* --- AJOUT POUR LE ZOOM --- */
+    transform: scale(1.1); /* augmente la valeur pour plus de zoom */
+    transform-origin: top center;
 }
 
 .container {
@@ -84,7 +88,6 @@ header .container nav ul {
     box-shadow: 3px 3px 2px 2px rgba(50, 50, 50, 0.25),
     inset -0.5px -0.5px 0.5px 0.5px rgb(255, 255, 255, 0.25),
     inset 0.5px 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.25);
-
 }
 
 .choise__btn {
@@ -125,7 +128,6 @@ header .container nav ul {
 
 .QuizPage {
     min-height: 100vh;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -137,7 +139,6 @@ header .container nav ul {
     flex-direction: column;
     text-align: center;
     gap: 3rem;
-
 }
 
 .res__container {
