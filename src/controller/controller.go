@@ -14,6 +14,10 @@ func renderPage(w http.ResponseWriter, filename string, data any) {
 		http.Error(w, "Erreur rendu template : "+err.Error(), http.StatusInternalServerError)
 	}
 }
+func Home(w http.ResponseWriter, r *http.Request) {
+	data := map[string]any{}
+	renderPage(w, "index.html", data)
+}
 
 func Quiz(w http.ResponseWriter, r *http.Request) {
 	quizType := r.URL.Query().Get("type")
