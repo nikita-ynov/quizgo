@@ -18,10 +18,6 @@ body {
     font-family: "Montserrat", sans-serif;
     color: var(--text-color);
     background-image: linear-gradient(rgba(0, 174, 255, 0.1), rgba(13, 0, 255, 0.1));
-
-    /* --- AJOUT POUR LE ZOOM --- */
-    transform: scale(1.1); /* augmente la valeur pour plus de zoom */
-    transform-origin: top center;
 }
 
 .container {
